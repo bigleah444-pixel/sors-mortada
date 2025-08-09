@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: sors-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: Number
+        sync: false
+      - key: code
+        sync: false
+      - key: pass
+        sync: false
