@@ -1,0 +1,8 @@
+telethon
+beautifulsoup4
+fake-useragent
+requests
+gtts
+flask
+pytz
+aiohttp
