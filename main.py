@@ -13,19 +13,21 @@ import pickle
 import re
 import io
 import aiohttp
+from telethon.sync import TelegramClient
+from telethon.sessions import StringSession
 
-api_id = int(input(" API ID –  "))
-api_hash = input(" API Hash –  ")
-phone_number = input("NUM(+964) –  ")
-session_name = 'sors mortada'
-response_file = 'responses.pkl'
+api_id = int(input(" API ID – "))
+api_hash = input(" API Hash – ")
+string_session = input(" String Session – ")
+
+session_name = StringSession(string_session)
 published_messages_file = 'published_messages.pkl'
 muted_users_file = 'muted_users.pkl'
 time_update_status_file = 'time_update_status.pkl'
 channel_link_file = 'channel_link.pkl'
 
 client = TelegramClient(session_name, api_id, api_hash)
-client.start(phone_number)
+client.start()
 
 
 if os.path.exists(response_file):
