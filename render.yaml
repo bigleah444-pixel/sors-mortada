@@ -1,32 +1,29 @@
 databases:
-  - name: On
+  - name:mort 
     ipAllowList: []
     region: frankfurt
     plan: free
-
 services:
   - type: web
     plan: free
-    name: On
+    name: mort 
     env: python
     buildCommand: pip install -U -r requirements.txt
-    startCommand: python3 -m main.py 
+    startCommand: python3
+mort.py
     region: frankfurt
     envVars:
-      - key: API_ID
-        sync: false
+      - key: APP_ID
+        value: "25978936"
       - key: API_HASH
-        sync: false
+        value: "cf754dc655df0e7deff36732dbfff074"
       - key: STRING_SESSION
         sync: false
-      - key: ENV
-        value: ANYTHING
-      - key: TZ
         value: Asia/Amman
       - key: PYTHON_VERSION
-        value: "3.10.9"
+        value: "3.11.7"
       - key: DATABASE_URL
         fromDatabase:
-          name: On
+          name:mort 
           property: connectionString
     autoDeploy: false
