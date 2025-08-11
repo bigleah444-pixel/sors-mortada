@@ -16,11 +16,11 @@ import aiohttp
 from telethon.sync import TelegramClient
 from telethon.sessions import StringSession
 
-api_id = int(input(" API ID – "))
-api_hash = input(" API Hash – ")
-string_session = input(" String Session – ")
+api_id = os.environ.get("API_ID", None)
+api_hash = os.environ.get("API_HASH", None)
+session_string = os.environ.get("STRING_SESSION", None)
 
-session_name = StringSession(string_session)
+session_name = StringSession(session_string)
 published_messages_file = 'published_messages.pkl'
 muted_users_file = 'muted_users.pkl'
 time_update_status_file = 'time_update_status.pkl'
