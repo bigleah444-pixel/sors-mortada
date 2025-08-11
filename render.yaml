@@ -9,8 +9,7 @@ services:
     name: mort 
     env: python
     buildCommand: pip install -U -r requirements.txt
-    startCommand: python3
-mort.py
+    startCommand: python3 -m
     region: frankfurt
     envVars:
       - key: APP_ID
