@@ -1,5 +1,5 @@
 databases:
-  - name:mort 
+  - name: mort 
     ipAllowList: []
     region: frankfurt
     plan: free
@@ -9,7 +9,7 @@ services:
     name: mort 
     env: python
     buildCommand: pip install -U -r requirements.txt
-    startCommand: python3 -m
+    startCommand: python3 m- main.py
     region: frankfurt
     envVars:
       - key: APP_ID
@@ -23,6 +23,6 @@ services:
         value: "3.11.7"
       - key: DATABASE_URL
         fromDatabase:
-          name:mort 
+          name: mort 
           property: connectionString
     autoDeploy: false
