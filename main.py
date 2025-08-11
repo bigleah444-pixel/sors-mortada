@@ -16,17 +16,17 @@ import aiohttp
 from telethon.sync import TelegramClient
 from telethon.sessions import StringSession
 
+print('تم تشغيل سورس مرتضى بنجاح') 
 api_id = os.environ.get("API_ID", None)
 api_hash = os.environ.get("API_HASH", None)
 session_string = os.environ.get("STRING_SESSION", None)
 
-session_name = StringSession(session_string)
 published_messages_file = 'published_messages.pkl'
 muted_users_file = 'muted_users.pkl'
 time_update_status_file = 'time_update_status.pkl'
 channel_link_file = 'channel_link.pkl'
 
-client = TelegramClient(session_name, api_id, api_hash)
+client = TelegramClient(StringSession(session_string), int(api_id), api_hash)
 client.start()
 
 
