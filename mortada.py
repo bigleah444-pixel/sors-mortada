@@ -24,7 +24,7 @@ def _start_project():
     print(" بدء تشغيل مرتضى")
     # تشغيل server.py في الخلفية ثم main
     run("python3 server.py &")
-    run("python3 server.py & python3 main.py")
+    run("python3 m- main")
 
 if __name__ == "__main__":
     _run_git_clone()
