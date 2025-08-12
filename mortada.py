@@ -24,9 +24,9 @@ def _start_project():
     print(" بدء تشغيل مرتضى")
     # تشغيل server.py في الخلفية ثم mortada
     run("python3 server.py &")
-    run("python3 -m main.py")
+    run("python3 -m mortada.py")
 
-if name == "main":
+if name == "mortada":
     _run_git_clone()
     _install_requirements()
     _start_project()
