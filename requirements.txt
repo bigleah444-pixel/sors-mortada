@@ -1,6 +1,8 @@
 Telethon==1.30.3
 telethon-session-sqlalchemy
 setuptools
+lxml==4.9.3
+lxml
 wheel
 gunicorn
 flask
