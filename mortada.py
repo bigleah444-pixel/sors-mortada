@@ -26,7 +26,7 @@ def _start_project():
     run("python3 server.py &")
     run("python3 -m mortada.py")
 
-if name == "mortada":
+if name == " mortada.py ":
     _run_git_clone()
     _install_requirements()
     _start_project()
