@@ -9,14 +9,12 @@ services:
     name: mort
     env: python
     buildCommand: pip install -U -r requirements.txt
-    startCommand: python3 mortada.py
+    startCommand: python3 mor.py
     region: frankfurt
     envVars:
       - key: APP_ID
         sync: false
       - key: API_HASH
-        sync: false
-      - key: ALIVE_NAME
         sync: false
       - key: ENV
         value: ANYTHING
