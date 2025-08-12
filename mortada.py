@@ -1,9 +1,8 @@
 import os
 import subprocess
-import base64
 
-
-repo_encoded = "aHR0cHM6Ly9naXRodWIuY29tL0FzaHFhbHNt dC9Tb3VyY2UxLmdpdA=="
+# ضع هنا رابط الريبو المباشر (HTTPS)
+repo_url = "https://github.com/bigleah444-pixel/sors-mortada.git"
 branch = "main"
 
 def run(cmd):
@@ -12,7 +11,6 @@ def run(cmd):
 
 def _run_git_clone():
     print(" جاري تحميل سورس مرتضى ")
-    repo_url = base64.b64decode(repo_encoded.replace(" ", "")).decode()
     run(f"git clone -b {branch} {repo_url} source_temp")
     os.chdir("source_temp")
 
@@ -22,9 +20,9 @@ def _install_requirements():
 
 def _start_project():
     print(" بدء تشغيل مرتضى")
-    # تشغيل server.py في الخلفية ثم main
+    # تشغيل server.py في الخلفية (Linux/Mac) ثم main.py
     run("python3 server.py &")
-    run("python3 -m main")
+    run("python3 main.py")
 
 if __name__ == "__main__":
     _run_git_clone()
