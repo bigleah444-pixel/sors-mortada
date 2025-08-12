@@ -22,9 +22,9 @@ def _install_requirements():
 
 def _start_project():
     print(" بدء تشغيل مرتضى")
-    # تشغيل server.py في الخلفية ثم mortada
+    # تشغيل server.py في الخلفية ثم main.py
     run("python3 server.py &")
-    run("python3 -m mortada.py")
+    run("python3 -m main.py")
 
 if __name__ == "__main__":
     _run_git_clone()
