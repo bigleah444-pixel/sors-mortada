@@ -10,7 +10,6 @@ flask_restful
 aiocsv
 aiofiles
 aiohttp
-subprocess
 aiosqlite
 arabic_reshaper
 beautifulsoup4
