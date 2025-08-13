@@ -8,6 +8,7 @@ gunicorn
 flask
 flask_restful
 aiocsv
+gunicorn
 aiofiles
 aiohttp
 aiosqlite
