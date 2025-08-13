@@ -15,7 +15,6 @@ import io
 import aiohttp
 from telethon.sync import TelegramClient
 from telethon.sessions import StringSession
-#خطر سريع الاشتعال ممنوع تلعب هنا#
 print('تم تشغيل سورس مرتضى بنجاح') 
 api_id = os.environ.get("API_ID", None)
 api_hash = os.environ.get("API_HASH", None)
@@ -28,7 +27,6 @@ channel_link_file = 'channel_link.pkl'
 
 client = TelegramClient(StringSession(session_string), int(api_id), api_hash)
 client.start()
-#خطر سريع الاشتعال ممنوع تلعب هنا#
 
 
 if os.path.exists(response_file):
