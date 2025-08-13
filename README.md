@@ -23,7 +23,7 @@
 
 - `API_ID`: معرف API الخاص بك من my.telegram.org
 - `API_HASH`: مفتاح API الخاص بك من my.telegram.org  
-- `STRING_SESSION`:كود الجلسة
+- `STRING_SESSION`:كود الجلسة 
 ### الخطوة 2: النشر
 1. ارفع الملفات إلى مستودع GitHub
 2. اربط المستودع بـ Render
