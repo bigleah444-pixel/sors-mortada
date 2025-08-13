@@ -3,13 +3,14 @@ databases:
     ipAllowList: []
     region: frankfurt
     plan: free
+
 services:
   - type: web
     plan: free
     name: mort
     env: python
     buildCommand: pip install -U -r requirements.txt
-    startCommand: python3 mortada.py
+    startCommand: gunicorn app:app & python3 -m mortada
     region: frankfurt
     envVars:
       - key: APP_ID
