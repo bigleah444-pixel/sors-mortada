@@ -9,7 +9,7 @@ services:
     name: mort
     env: python
     buildCommand: pip install -U -r requirements.txt
-    startCommand: python3 mor.py
+    startCommand: python3 mortada.py
     region: frankfurt
     envVars:
       - key: APP_ID
