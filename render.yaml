@@ -10,7 +10,7 @@ services:
     name: mort
     env: python
     buildCommand: pip install -U -r requirements.txt
-    startCommand: gunicorn app:app & python3 -m mortada
+    startCommand: python3 server.py & python3 main.py
     region: frankfurt
     envVars:
       - key: APP_ID
